@@ -22,7 +22,7 @@ Pour installer et exécuter ce POC, suivez les étapes suivantes :
 2. **Installer les dépendances** :
    Assurez-vous d'avoir Python3 installé, puis exécutez :
    ```bash
-   pip install Flask
+   pip3 install Flask
    ```
 3. **Démarrer le serveur** :
    ```bash
