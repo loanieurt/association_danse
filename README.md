@@ -6,11 +6,6 @@
 ## Description
 Ce Proof of Concept (POC) a été développé pour démontrer les fonctionnalités de base d'un système de gestion pour une association sportive. Le système permet la gestion des adhérents, des événements, ainsi que le suivi de la présence à ces événements.
 
-## Fonctionnalités
-- **Inscription et gestion des adhérents** : Permet aux adhérents de s'inscrire et de mettre à jour leurs informations personnelles.
-- **Gestion des événements** : Création et gestion des événements, incluant les inscriptions et la gestion des places.
-- **Suivi de la présence** : Enregistrement de la présence des adhérents aux différents événements.
-- **Dashboard** : Un tableau de bord pour visualiser les statistiques clés concernant les adhérents et les événements.
 
 ## Technologies Utilisées
 - **Backend** : Python avec le framework Flask
