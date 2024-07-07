@@ -1,0 +1,64 @@
+{
+    "Evenements": [
+        {
+            "nom_evenement": "Cours de Ballet",
+            "participants": [
+                {
+                    "nom": "John Doe",
+                    "prenom": "John",
+                    "presence": true
+                },
+                {
+                    "nom": "Jane Smith",
+                    "prenom": "Jane",
+                    "presence": false
+                },
+                {
+                    "nom": "Alice Johnson",
+                    "prenom": "Alice",
+                    "presence": true
+                }
+            ]
+        },
+        {
+            "nom_evenement": "Cours de Jazz",
+            "participants": [
+                {
+                    "nom": "John Doe",
+                    "prenom": "John",
+                    "presence": true
+                },
+                {
+                    "nom": "Alice Johnson",
+                    "prenom": "Alice",
+                    "presence": false
+                },
+                {
+                    "nom": "Bob Brown",
+                    "prenom": "Bob",
+                    "presence": true
+                }
+            ]
+        },
+        {
+            "nom_evenement": "Cours de Hip Hop",
+            "participants": [
+                {
+                    "nom": "Jane Smith",
+                    "prenom": "Jane",
+                    "presence": false
+                },
+                {
+                    "nom": "Alice Johnson",
+                    "prenom": "Alice",
+                    "presence": false
+                },
+                {
+                    "nom": "Bob Brown",
+                    "prenom": "Bob",
+                    "presence": false
+                }
+            ]
+        }
+    ]
+}

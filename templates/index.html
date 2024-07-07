@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prise de Présence</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 40px;
+            font-size: 16px;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        label {
+            margin-right: 15px;
+        }
+        input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        select, input[type="submit"] {
+            padding: 8px 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #5c67f2;
+            color: white;
+            border: none;
+            margin-top: 10px;
+        }
+        input[type="submit"]:hover {
+            background-color: #4a54e1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Liste de Présence</h1>
+    <form method="POST" action="/select_event">
+        <label for="event_name">Choisir un événement:</label>
+        <select name="event_name" id="event_name" onchange="this.form.submit()">
+            <option value="">--Sélectionner un événement--</option>
+            {% for evenement in evenements %}
+                <option value="{{ evenement.nom_evenement }}" {% if selected_event == evenement.nom_evenement %}selected{% endif %}>{{ evenement.nom_evenement }}</option>
+            {% endfor %}
+        </select>
+    </form>
+    {% if selected_event %}
+    <form method="POST" action="/save_presence">
+        <input type="hidden" name="event_name" value="{{ selected_event }}">
+        {% for event in evenements %}
+            {% if event.nom_evenement == selected_event %}
+                {% for person in event.participants %}
+                    <label>
+                        <input type="checkbox" name="{{ person.prenom }} {{ person.nom }}" {{ 'checked' if person.presence else '' }}>
+                        {{ person.prenom }} {{ person.nom }}
+                    </label><br>
+                {% endfor %}
+            {% endif %}
+        {% endfor %}
+        <button type="submit">Enregistrer la présence</button>
+    </form>
+    {% endif %}
+</body>
+</html>
