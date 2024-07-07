@@ -17,7 +17,7 @@ Pour installer et exécuter ce POC, suivez les étapes suivantes :
 
 1. **Cloner le dépôt Git** :
    ```bash
-   git clone git@github.com:loanieurt/association-danse.git
+   git clone git@github.com:loanieurt/association_danse.git
    ```
 2. **Installer les dépendances** :
    Assurez-vous d'avoir Python3 installé, puis exécutez :
